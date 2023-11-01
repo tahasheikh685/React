@@ -2,7 +2,7 @@ import { useState } from 'react'
 import productData from './Components/ProductData';
 
 function App() {
-  const categories = [...new Set(productData.map(item => item.category))];
+  const categories = [new Set(productData.map(item => item.category))];
   const [selectedCategory, setSelectedCategory] = useState(null);
   const [selectedProduct, setSelectedProduct] = useState(null);
   const [showSubcategories, setShowSubcategories] = useState(false);
